@@ -16,3 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+package "dspam"
+
+template "/etc/default/dspam"
+
+#template "/etc/dspam/dspam.conf"
