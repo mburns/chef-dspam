@@ -21,4 +21,4 @@ package "dspam"
 
 template "/etc/default/dspam"
 
-#template "/etc/dspam/dspam.conf"
+template "/etc/dspam/dspam.conf"
