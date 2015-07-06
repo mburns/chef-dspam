@@ -17,16 +17,16 @@
 # limitations under the License.
 #
 
-package 'dspam'
-
-service 'dspam' do
-  action [:enable, :start]
-end
-
 template '/etc/default/dspam' do
   notifies :restart, resources(service: 'dspam')
 end
 
 template '/etc/dspam/dspam.conf' do
   notifies :restart, resources(service: 'dspam')
+end
+
+package 'dspam'
+
+service 'dspam' do
+  action [:enable, :start]
 end
