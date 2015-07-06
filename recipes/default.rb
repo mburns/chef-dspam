@@ -19,14 +19,14 @@
 
 package 'dspam'
 
-service 'dspam' do
-  action [:enable, :start]
-end
-
 template '/etc/default/dspam' do
-  notifies :restart, resources(service: 'dspam')
+  notifies :restart, 'service[dspam]', :delayed
 end
 
 template '/etc/dspam/dspam.conf' do
-  notifies :restart, resources(service: 'dspam')
+  notifies :restart, 'service[dspam]', :delayed
+end
+
+service 'dspam' do
+  action [:enable, :start]
 end
