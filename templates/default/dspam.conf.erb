@@ -227,8 +227,6 @@ Feature whitelist
 #
 # Don't mess with this unless you know what you're doing
 #
-#Algorithm chi-square
-#Algorithm naive
 Algorithm graham burton
 
 #
@@ -446,16 +444,6 @@ PurgeHits1S	15	# Tokens with only 1 spam hit
 PurgeHits1I	15	# Tokens with only 1 innocent hit
 
 #
-# Purge configuration for SQL-based installations using purge.sql
-#
-#PurgeSignature	off	# Specified in purge.sql
-#PurgeNeutral	90
-#PurgeUnused	off	# Specified in purge.sql
-#PurgeHapaxes	off	# Specified in purge.sql
-#PurgeHits1S	off	# Specified in purge.sql
-#PurgeHits1I	off	# Specified in purge.sql
-
-#
 # Local Mail Exchangers: Used for source address tracking, tells DSPAM which
 # mail exchangers are local and therefore should be ignored in the Received:
 # header when tracking the source of an email. Note: you should use the address
@@ -547,9 +535,7 @@ ChangeUserOnParse full
 # Specifying 'lineStripping' causes DSPAM to strip ^M's from messages passed
 # in.
 #
-#Broken returnCodes
 Broken case
-#Broken lineStripping
 
 #
 # MaxMessageSize: You may specify a maximum message size for DSPAM to process.
@@ -638,10 +624,6 @@ ServerDomainSocketPath	"/var/run/dspam/dspam.sock"
 #
 ClientHost	/var/run/dspam/dspam.sock
 ClientIdent	"secret@Relay1"
-#
-#ClientHost	127.0.0.1
-#ClientPort	2424
-#ClientIdent	"secret@Relay1"
 
 # --- RABL ---
 
