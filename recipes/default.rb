@@ -2,6 +2,7 @@
 # Cookbook Name:: dspam
 # Recipe:: default
 #
+# Copyright 2015, Michael Burns (<michael@mirwin.net>)
 # Copyright 2013, computerlyrik
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
